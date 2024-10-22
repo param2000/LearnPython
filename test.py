@@ -1,11 +1,37 @@
 from Core import *
 from HttpPlay import *
 from Util import addItem
+import pytest
 
 dis = 1==0
+
+def test_add():
+    assert getTotal(5, 5)==10
+
+def test_frizzbeebuzz():
+    result = frizzBeeBuzz(15)
+    assert result == "frizzbeebuzz"
+
+def test_frizzbeebuzz():
+    result = frizzBeeBuzz(3)
+    assert result == "frizzbee"
+
+def test_frizzbeebuzz():
+    result = frizzBeeBuzz(5)
+    assert result == "buzz"
+
+def test_frizzbeebuzz():
+    result = frizzBeeBuzz(7)
+    assert result == "None"
+
+def test_frizzbeebuzz():
+    result = frizzBeeBuzz(-7)
+    assert result == "None"
+
+
+
+
 if dis:
-    x = getTotal(5, 5)
-    print(x)
 
     z = getList(10)
     print(z)
@@ -16,11 +42,6 @@ if dis:
 
     for i in range(temp,temp+10):
         print(a.get(i))
-
-    print(frizzBeeBuzz(15))
-    print(frizzBeeBuzz(3))
-    print(frizzBeeBuzz(5))
-    print(frizzBeeBuzz(7))
 
 url = "https://www.themealdb.com/api/json/v1/1/categories.php"
 urlVeggie = "https://www.themealdb.com/api/json/v1/1/filter.php?c=vegetarian"
