@@ -30,3 +30,14 @@ def test_addingCount():
     assert items["apple"]==1
     addItem(items, "apple")
     assert 2 == items["apple"]
+
+def test_dictionary():
+    a = getDictionary(10)
+    print(a)
+    assert len(a)==10
+
+def test_list():
+    a = getList(10)
+    print(a)
+    assert len(a)==10
+
