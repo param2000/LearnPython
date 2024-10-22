@@ -35,6 +35,7 @@ def addItem(items, key):
 def getIngredientsForAMeal(meals):
     items = {}
     for meal in meals["meals"]:
+        # concatrenation is bad for request forgery, but for fun it's Okay
         url = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + meal["id"]
         ingredients = requests.get(url).json()
         for ingredient in ingredients["meals"]:
