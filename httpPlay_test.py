@@ -1,4 +1,3 @@
-from Core import getList, getDictionary
 from HttpPlay import HttpPlay
 
 url = "https://www.themealdb.com/api/json/v1/1/categories.php"

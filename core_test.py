@@ -1,5 +1,6 @@
 from Core import Core
-from Util import addItem
+from Util import *
+
 
 def test_add():
     assert Core.getTotal(5, 5)==10
