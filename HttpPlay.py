@@ -3,11 +3,13 @@ from Util import *
 
 class HttpPlay:
 
-    def getResponse(self, url):
+    @staticmethod
+    def getResponse(url):
         response = requests.get(url)
         return response.json()
 
-    def getResponse2(self, url):
+    @staticmethod
+    def getResponse2(url):
         response = requests.get(url)
         meals = response.json()["meals"]
         for meal in meals:
@@ -15,7 +17,8 @@ class HttpPlay:
             print(meal["strMeal"])
         return
 
-    def getAllVeggieMeals(self, url):
+    @staticmethod
+    def getAllVeggieMeals(url):
         response = requests.get(url)
         meals = response.json()["meals"]
         veggies = []
@@ -33,7 +36,8 @@ class HttpPlay:
                 self.addIngredients(ingredient, items)
         return items
 
-    def addIngredients(self, ingredient, items):
+    @staticmethod
+    def addIngredients(ingredient, items):
         for key in ingredient:
             if key.startswith("strIngredient") and ingredient[key] != "":
                 addItem(items, ingredient[key])
