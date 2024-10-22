@@ -31,14 +31,17 @@ url = "https://www.themealdb.com/api/json/v1/1/categories.php"
 urlVeggie = "https://www.themealdb.com/api/json/v1/1/filter.php?c=vegetarian"
 urlMeal ="https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772"
 
-#print(getResponse(urlVeggie))
-#print(getResponse2(urlMeal))
-#print(getResponse(urlVeggie))
-#print(getAllVeggieMeals(urlVeggie))
 
-meals =getAllVeggieMeals(urlVeggie)
+httpPlay = HttpPlay()
+
+#print(httpPlay.getResponse(urlVeggie))
+#print(httpPlay.getResponse2(urlMeal))
+#print(httpPlay.getResponse(urlVeggie))
+#print(httpPlay.getAllVeggieMeals(urlVeggie))
+
+meals = httpPlay.getAllVeggieMeals(urlVeggie)
 #print(meals)
-allVeggiesIngredientCount = getIngredientsForAMeal(meals)
+allVeggiesIngredientCount = httpPlay.getIngredientsForAMeal(meals)
 print(allVeggiesIngredientCount)
 sortedItems= dict(sorted(allVeggiesIngredientCount.items(), key = lambda x:x[1], reverse = True))
 print(sortedItems)
