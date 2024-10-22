@@ -1,7 +1,6 @@
 import requests
 from Util import *
 
-
 class HttpPlay:
 
     def getResponse(self, url):
