@@ -18,11 +18,11 @@ def test_frizzbeebuzz():
 
 def test_frizzbeebuzz():
     result = frizzBeeBuzz(7)
-    assert result == "None"
+    assert result == None
 
 def test_frizzbeebuzz():
     result = frizzBeeBuzz(-7)
-    assert result == "None"
+    assert result == None
 
 def test_addingCount():
     items ={}
