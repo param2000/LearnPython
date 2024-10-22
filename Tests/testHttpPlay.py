@@ -20,7 +20,7 @@ def test_json_data_from_response():
 
 def test_json_data_from_response_2():
     result = httpPlay.getResponse2(urlMeal)
-    print(result)
+    #print(result)
     assert result is None
 
 
@@ -31,7 +31,7 @@ def test_json_data_fromAllVeggies():
 
 def test_AllIngredientsCountColleted():
     meals = httpPlay.getAllVeggieMeals(urlVeggie)
-    print(meals)
+    #print(meals)
     allVeggiesIngredientCount = httpPlay.getIngredientsForAMeal(meals)
     sortedItems= dict(sorted(allVeggiesIngredientCount.items(), key = lambda x:x[1], reverse = True))
     print(sortedItems)
