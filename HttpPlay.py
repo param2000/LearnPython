@@ -12,6 +12,7 @@ def getResponse2(url):
         print(meal["idMeal"])
         print(meal["strMeal"])
     return
+
 def getAllVeggieMeals(url):
     response = requests.get(url)
     meals = response.json()["meals"]
