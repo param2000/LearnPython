@@ -1,6 +1,6 @@
 from os import system
 import Core
-from Core import getTotal, getList, getDictionary, frizzBeeBuzz
+from Core import *
 from HttpPlay import *
 
 x = getTotal(5,5)
