@@ -1,5 +1,29 @@
 from Core import getList, getDictionary
 from HttpPlay import HttpPlay
+from testHttpPlay import z, temp, a, allVeggiesIngredientCount, sortedItems
+
+
+dis = 1==0
+
+if dis:
+
+    print(z)
+
+    print(a)
+
+    for i in range(temp, temp + 10):
+        print(a.get(i))
+
+#print(httpPlay.getResponse(urlVeggie))
+#print(httpPlay.getResponse2(urlMeal))
+#print(httpPlay.getResponse(urlVeggie))
+#print(httpPlay.getAllVeggieMeals(urlVeggie))
+
+#print(meals)
+print(allVeggiesIngredientCount)
+print(sortedItems)
+
+
 
 z = getList(10)
 temp = 10
