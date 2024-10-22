@@ -1,27 +1,27 @@
-from Core import *
+from Core import Core
 from Util import addItem
 
 def test_add():
-    assert getTotal(5, 5)==10
+    assert Core.getTotal(5, 5)==10
 
 def test_frizzbeebuzz():
-    result = frizzBeeBuzz(15)
+    result = Core.frizzBeeBuzz(15)
     assert result == "frizzbeebuzz"
 
 def test_frizzbeebuzz():
-    result = frizzBeeBuzz(3)
+    result = Core.frizzBeeBuzz(3)
     assert result == "frizzbee"
 
 def test_frizzbeebuzz():
-    result = frizzBeeBuzz(5)
+    result = Core.frizzBeeBuzz(5)
     assert result == "buzz"
 
 def test_frizzbeebuzz():
-    result = frizzBeeBuzz(7)
+    result = Core.frizzBeeBuzz(7)
     assert result == None
 
 def test_frizzbeebuzz():
-    result = frizzBeeBuzz(-7)
+    result = Core.frizzBeeBuzz(-7)
     assert result == None
 
 def test_addingCount():
@@ -32,12 +32,12 @@ def test_addingCount():
     assert 2 == items["apple"]
 
 def test_dictionary():
-    a = getDictionary(10)
+    a = Core.getDictionary(10)
     print(a)
     assert len(a)==10
 
 def test_list():
-    a = getList(10)
+    a = Core.getList(10)
     print(a)
     assert len(a)==10
 
