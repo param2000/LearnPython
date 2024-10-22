@@ -34,7 +34,7 @@ def test_AllIngredientsCountColleted():
     #print(meals)
     allVeggiesIngredientCount = httpPlay.getIngredientsForAMeal(meals)
     sortedItems= dict(sorted(allVeggiesIngredientCount.items(), key = lambda x:x[1], reverse = True))
-    print(sortedItems)
+    #print(sortedItems)
 
     assert sortedItems is not None
     assert type(sortedItems) is dict

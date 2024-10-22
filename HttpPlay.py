@@ -12,9 +12,9 @@ class HttpPlay:
     def getResponse2(url):
         response = requests.get(url)
         meals = response.json()["meals"]
-        for meal in meals:
-            print(meal["idMeal"])
-            print(meal["strMeal"])
+        #for meal in meals:
+            #print(meal["idMeal"])
+            #print(meal["strMeal"])
         return
 
     @staticmethod
