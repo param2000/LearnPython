@@ -34,8 +34,8 @@ urlMeal ="https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772"
 #print(getResponse(urlVeggie))
 #print(getResponse2(urlMeal))
 #print(getResponse(urlVeggie))
-
 #print(getAllVeggieMeals(urlVeggie))
+
 meals =getAllVeggieMeals(urlVeggie)
 #print(meals)
 allVeggiesIngredientCount = getIngredientsForAMeal(meals)
