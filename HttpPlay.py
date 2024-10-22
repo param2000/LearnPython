@@ -35,18 +35,17 @@ def addItem(items, key):
 def getIngredientsForAMeal(meals):
     items = {}
     for meal in meals["meals"]:
-        #print(meal)
         url = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + meal["id"]
-        #print(url)
         ingredients = requests.get(url).json()
-        #print(ingredients)
         for ingredient in ingredients["meals"]:
-            #print(ingredient)
-            for key in ingredient:
-                #print(key)
-                if key.startswith("strIngredient") and ingredient[key] != "":
-                    #print(ingredient[key])
-                    addItem(items, ingredient[key])
-
+            addIngredients(ingredient, items)
     return items
+
+
+def addIngredients(ingredient, items):
+    for key in ingredient:
+        # print(key)
+        if key.startswith("strIngredient") and ingredient[key] != "":
+            # print(ingredient[key])
+            addItem(items, ingredient[key])
 
