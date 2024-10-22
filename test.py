@@ -3,10 +3,11 @@ import Core
 from Core import *
 from HttpPlay import *
 
-x = getTotal(5,5)
-print(x)
 dis = 1==0
 if dis:
+    x = getTotal(5, 5)
+    print(x)
+
     z = getList(10)
     print(z)
 
@@ -22,18 +23,15 @@ if dis:
     print(frizzBeeBuzz(5))
     print(frizzBeeBuzz(7))
 
-    items = {}
-    addItem(items, "apple")
-    addItem(items, "apple")
-    print(items)
-
 url = "https://www.themealdb.com/api/json/v1/1/categories.php"
 urlVeggie = "https://www.themealdb.com/api/json/v1/1/filter.php?c=vegetarian"
 urlMeal ="https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772"
 
-
 httpPlay = HttpPlay()
-
+items = {}
+httpPlay.addItem(items, "apple")
+httpPlay.addItem(items, "apple")
+print(items)
 #print(httpPlay.getResponse(urlVeggie))
 #print(httpPlay.getResponse2(urlMeal))
 #print(httpPlay.getResponse(urlVeggie))
