@@ -1,7 +1,6 @@
-from os import system
-import Core
 from Core import *
 from HttpPlay import *
+from Util import addItem
 
 dis = 1==0
 if dis:
@@ -29,8 +28,8 @@ urlMeal ="https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772"
 
 httpPlay = HttpPlay()
 items = {}
-httpPlay.addItem(items, "apple")
-httpPlay.addItem(items, "apple")
+addItem(items, "apple")
+addItem(items, "apple")
 print(items)
 #print(httpPlay.getResponse(urlVeggie))
 #print(httpPlay.getResponse2(urlMeal))

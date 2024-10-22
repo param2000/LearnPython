@@ -1,5 +1,7 @@
 import requests
-import json
+from Util import *
+
+
 class HttpPlay:
 
     def getResponse(self, url):
@@ -22,15 +24,6 @@ class HttpPlay:
             veggies.append({"id" : meal["idMeal"], "name": meal["strMeal"]})
         return {"meals" :veggies}
 
-
-    def addItem(self, items, key):
-        if key in items:
-            items[key] += 1
-            return
-        items[key] = 1
-        return
-
-
     def getIngredientsForAMeal(self, meals):
         items = {}
         for meal in meals["meals"]:
@@ -41,9 +34,8 @@ class HttpPlay:
                 self.addIngredients(ingredient, items)
         return items
 
-
     def addIngredients(self, ingredient, items):
         for key in ingredient:
             if key.startswith("strIngredient") and ingredient[key] != "":
-                self.addItem(items, ingredient[key])
+                addItem(items, ingredient[key])
 
