@@ -17,9 +17,6 @@ def getAllVeggieMeals(url):
     meals = response.json()["meals"]
     veggies = []
     for meal in meals:
-        #print(meal["idMeal"])
-        #print(meal["strMeal"])
-        #veggies.append({meal["idMeal"]:meal["strMeal"]})
         veggies.append({"id" : meal["idMeal"], "name": meal["strMeal"]})
     return {"meals" :veggies}
 
@@ -45,8 +42,6 @@ def getIngredientsForAMeal(meals):
 
 def addIngredients(ingredient, items):
     for key in ingredient:
-        # print(key)
         if key.startswith("strIngredient") and ingredient[key] != "":
-            # print(ingredient[key])
             addItem(items, ingredient[key])
 
